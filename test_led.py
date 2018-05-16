@@ -3,17 +3,17 @@ import time
  
 # Use physical pin numbers
 GPIO.setmode(GPIO.BOARD)
-# Set up header pin 29 (GPIO5) as an output
+# Set up header pin xx (GPIOx) as an output
 print "Setup Pin "
-GPIO.setup(29, GPIO.OUT)
+GPIO.setup(xx, GPIO.OUT)
  
 var=1
 print "Start loop"
 while var==1 :
   print "Set Output False"
-  GPIO.output(29, False)
+  GPIO.output(xx, False)
   time.sleep(1)
   print "Set Output True"
-  GPIO.output(29, True)
+  GPIO.output(xx, True)
   time.sleep(1)
 

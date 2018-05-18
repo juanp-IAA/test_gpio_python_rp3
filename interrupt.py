@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)  
   
 # GPIO 23 set up as input. It is pulled up to stop false signals  
-GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)  
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)  
   
 print "Make sure you have a button connected so that when pressed"  
 print "it will connect GPIO port 23 (pin 16) to GND (pin 6)\n"  
@@ -20,7 +20,7 @@ print "During this waiting time, your computer is not"
 print "wasting resources by polling for a button press.\n"  
 print "Press your button when ready to initiate a falling edge interrupt."  
 try:  
-    GPIO.wait_for_edge(23, GPIO.FALLING)  
+    GPIO.wait_for_edge(22, GPIO.FALLING)  
     print "\nFalling edge detected. Now your program can continue with"  
     print "whatever was waiting for a button press."  
 except KeyboardInterrupt:  

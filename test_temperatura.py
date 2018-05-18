@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+
 
 def get_temp_sens():
-        tfile = open("/sys/bus/w1/devices/28-01162e2c2bee/w1_slave")
+        tfile = open("/sys/bus/w1/devices/28-000008b90d36/w1_slave")
         text = tfile.read()
         tfile.close()
         secondline = text.split("\n")[1]

@@ -7,7 +7,7 @@ GPIO.setmode(GPIO.BOARD)
 print "Setup Pin 33" # El led verde 
 GPIO.setup(33, GPIO.OUT)
 
-GPIO.setup(15, GPIO.IN)
+GPIO.setup(15, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 
  
 var=1
@@ -16,8 +16,8 @@ while var==1 :
   print "Set Output False"
   GPIO.output(33, False)
   time.sleep(1)
-  if GPIO.input(15)== 1:
-    print "Set Output True"
+  if GPIO.input(15)== 0:
+    print "Set Output False"
     GPIO.output(33, False)
   else:
     print "Set Output True"

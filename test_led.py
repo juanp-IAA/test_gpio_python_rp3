@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
  
 # Use physical pin numbers
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.)
 # Set up header pin xx (GPIOx) as an output
 print "Setup Pin "
 GPIO.setup(xx, GPIO.OUT)

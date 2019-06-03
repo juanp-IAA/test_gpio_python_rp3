@@ -1,7 +1,7 @@
-
+# -*- coding: utf-8 -*-
 
 def get_temp_sens():
-        tfile = open("/sys/bus/w1/devices/28-000008b90d36/w1_slave")
+        tfile = open("/sys/bus/w1/devices/28-01162e4dc4ee/w1_slave")
         text = tfile.read()
         tfile.close()
         secondline = text.split("\n")[1]
@@ -10,7 +10,7 @@ def get_temp_sens():
         temperature = temperature / 1000
         return float(temperature)
 
-mensaje = str(get_temp_sens()) + " ºC"
+mensaje = str(get_temp_sens()) + "C"
 
 print(mensaje)
 

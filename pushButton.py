@@ -3,24 +3,24 @@ import time
  
 # Use physical pin numbers
 GPIO.setmode(GPIO.BOARD)
-# Set up header pin 33 (GPIO13) as an output
-print "Setup Pin 33" # El led verde 
-GPIO.setup(33, GPIO.OUT)
+# Set up header pin  (GPIO13) as an output
+print "Setup Pin " # El led verde 
+GPIO.setup(xx, GPIO.OUT)
 
-GPIO.setup(15, GPIO.IN,pull_up_down=GPIO.PUD_UP)
+GPIO.setup(xx, GPIO.IN,pull_up_down=GPIO.PUD_xx)
 
  
 var=1
 print "Start loop"
 while var==1 :
   print "Set Output False"
-  GPIO.output(33, False)
+  GPIO.output(xx, False)
   time.sleep(1)
-  if GPIO.input(15)== 0:
+  if GPIO.input(xx)== 0:
     print "Set Output False"
-    GPIO.output(33, False)
+    GPIO.output(xx, False)
   else:
     print "Set Output True"
-    GPIO.output(33, True)
+    GPIO.output(xx, True)
 
   time.sleep(1)
